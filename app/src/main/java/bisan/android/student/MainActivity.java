@@ -5,7 +5,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -25,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
             String url = "http://192.168.1.106:80/Student/stu.php";
-        //بتاكد هون اذا انت حاصل على ال permission
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.INTERNET)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -68,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         return in;
     }
 
-    // مشان ترتب الكود تاعنا واعطاناها الurl
     private String DownloadText(String URL) {
         //i speak with API from Android
 
